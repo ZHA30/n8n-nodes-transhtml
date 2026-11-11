@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "target": "es2022",
+    "lib": ["es2022", "dom"],
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "outDir": "dist"
+  },
+  "include": ["nodes/**/*.ts", "nodes/**/*.json", "package.json"]
+}

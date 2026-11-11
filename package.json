@@ -1,0 +1,60 @@
+{
+  "name": "n8n-nodes-transhtml",
+  "version": "0.1.0",
+  "description": "Translate visible HTML text with Google Translate in n8n",
+  "license": "MIT",
+  "keywords": [
+    "n8n-community-node-package",
+    "html",
+    "translate"
+  ],
+  "files": [
+    "dist/nodes/TransHtml/TransHtml.node.*",
+    "dist/nodes/TransHtml/*.svg",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "n8n-node build && esbuild nodes/TransHtml/TransHtml.node.ts --bundle --platform=node --target=node24 --format=cjs --external:n8n-workflow --sourcemap --outfile=dist/nodes/TransHtml/TransHtml.node.js",
+    "dev": "n8n-node dev",
+    "lint": "n8n-node lint",
+    "lint:fix": "n8n-node lint --fix",
+    "prepublishOnly": "npm run lint && npm run build"
+  },
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "strict": false,
+    "nodes": [
+      "dist/nodes/TransHtml/TransHtml.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@n8n/node-cli": "0.56.1",
+    "@types/node": "^24.0.0",
+    "dom-serializer": "^2.0.0",
+    "domhandler": "^5.0.3",
+    "domutils": "^3.2.2",
+    "esbuild": "^0.28.2",
+    "htmlparser2": "^10.0.0",
+    "n8n-workflow": "2.47.0",
+    "typescript": "~5.9.3"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
+  "homepage": "https://github.com/ZHA30/n8n-nodes-transhtml#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZHA30/n8n-nodes-transhtml.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ZHA30/n8n-nodes-transhtml/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
